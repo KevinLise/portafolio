@@ -31,13 +31,17 @@ npm run preview
 
 ## Publicar en GitHub Pages
 
-1. Crea un repositorio **público** llamado `portafolio` en tu cuenta.
-2. Sube el proyecto a la rama `main`.
-3. En el repo: **Settings → Pages → Source: GitHub Actions**.
-4. Cada push a `main` publica el sitio con el workflow de `.github/workflows/deploy.yml`.
+El sitio se publica desde la rama **`gh-pages`** (solo el build estático). Para actualizarlo:
 
-URL resultante: `https://kevinlise.github.io/portafolio/`
+```powershell
+.\deploy.ps1
+```
 
+El script compila con Vite y sube `dist` a `gh-pages`:
+
+**https://kevinlise.github.io/portafolio/**
+
+> La rama `main` guarda el código fuente; `gh-pages` solo el sitio compilado.
 > Si algún día usas un dominio propio, cambia `base: '/portafolio/'` por `base: '/'` en
 > `vite.config.js`.
 
@@ -53,7 +57,7 @@ Casi todo el texto vive en `src/data.js`:
 ## Estructura
 
 ```
-├── .github/workflows/deploy.yml
+├── deploy.ps1
 ├── index.html
 ├── src
 │   ├── App.jsx
