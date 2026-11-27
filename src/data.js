@@ -102,6 +102,14 @@ export const tools = [
   'Extracción de datos',
 ]
 
+// Frases que rota el typewriter del hero
+export const taglines = [
+  'Automatización con IA',
+  'Agentes sobre RAG',
+  'LLMs locales · OCR',
+  'Diseño de producto',
+]
+
 export const about = [
   'Soy desarrollador de software con enfoque en automatización. Diseño agentes que trabajan sobre RAG: conecto modelos, documentos y flujos para que las tareas repetitivas se resuelvan solas.',
   'Mi enfoque es entender el proceso, diseñar la solución y orquestar las herramientas de IA. Uso la IA como mi principal herramienta de trabajo y cuido cada detalle de lo que entrego.',

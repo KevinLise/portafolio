@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { about, navLinks, profile, projects, skillGroups, tools } from './data'
+import { about, navLinks, profile, projects, skillGroups, taglines, tools } from './data'
 
 function Icon({ name, size = 18 }) {
   const common = {
@@ -60,6 +60,60 @@ function BrandMark() {
       <path d="M9 17.5 25 2M9 17.5 25 33" stroke="#DEDCE0" strokeWidth="5" strokeLinecap="square" />
       <rect x="16.5" y="14.5" width="6" height="6" fill="#3C2BC2" />
     </svg>
+  )
+}
+
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setReduced(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  return reduced
+}
+
+function Typewriter({ words }) {
+  const reduced = usePrefersReducedMotion()
+  const [index, setIndex] = useState(0)
+  const [text, setText] = useState('')
+  const [deleting, setDeleting] = useState(false)
+
+  useEffect(() => {
+    if (reduced) {
+      setText(words[0])
+      return
+    }
+
+    const word = words[index]
+    let delay = deleting ? 28 : 55
+    if (!deleting && text === word) delay = 1700
+    if (deleting && text === '') delay = 300
+
+    const timeout = setTimeout(() => {
+      if (!deleting) {
+        if (text === word) setDeleting(true)
+        else setText(word.slice(0, text.length + 1))
+      } else if (text === '') {
+        setDeleting(false)
+        setIndex((value) => (value + 1) % words.length)
+      } else {
+        setText(word.slice(0, text.length - 1))
+      }
+    }, delay)
+
+    return () => clearTimeout(timeout)
+  }, [text, deleting, index, reduced, words])
+
+  return (
+    <span className="typewriter" aria-hidden="true">
+      <span>{text}</span>
+      <span className="caret" />
+    </span>
   )
 }
 
@@ -138,7 +192,6 @@ export default function App() {
         <div className="container header-inner">
           <a className="brand" href="#inicio" onClick={closeMenu} aria-label="Kevin — inicio">
             <BrandMark />
-            <span className="brand-name">Kevin</span>
           </a>
 
           <nav className="desktop-nav" aria-label="Navegación principal">
@@ -195,7 +248,11 @@ export default function App() {
           <Pixels className="hero-pixels-left" />
           <div className="container hero-grid">
             <div className="hero-copy" data-reveal>
-              <p className="eyebrow">// {profile.tagline}</p>
+              <p className="eyebrow">
+                <span className="sr-only">{profile.tagline}</span>
+                <span aria-hidden="true">// </span>
+                <Typewriter words={taglines} />
+              </p>
               <h1>
                 Desarrollo de software con enfoque en{' '}
                 <span className="accent">automatización</span>
@@ -386,9 +443,8 @@ export default function App() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <div className="footer-top">
-              <a className="brand" href="#inicio">
+              <a className="brand" href="#inicio" aria-label="Kevin — inicio">
                 <BrandMark />
-                <span className="brand-name">Kevin</span>
               </a>
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
             </div>
