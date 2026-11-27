@@ -46,6 +46,23 @@ function Icon({ name, size = 18 }) {
   return null
 }
 
+function BrandMark() {
+  return (
+    <svg
+      className="brand-mark"
+      width="26"
+      height="32"
+      viewBox="0 0 28 35"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect x="1" y="1.5" width="5" height="32" fill="#DEDCE0" />
+      <path d="M9 17.5 25 2M9 17.5 25 33" stroke="#DEDCE0" strokeWidth="5" strokeLinecap="square" />
+      <rect x="16.5" y="14.5" width="6" height="6" fill="#3C2BC2" />
+    </svg>
+  )
+}
+
 function Pixels({ className = '' }) {
   return <span className={`pixels ${className}`} aria-hidden="true" />
 }
@@ -119,16 +136,9 @@ export default function App() {
     <>
       <header className={`site-header ${menuOpen ? 'is-open' : ''}`}>
         <div className="container header-inner">
-          <a className="brand" href="#inicio" onClick={closeMenu} aria-label="Inicio">
-            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M9 6 4 12l5 6M15 6l5 6-5 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-              />
-            </svg>
-            <span>Kevin</span>
+          <a className="brand" href="#inicio" onClick={closeMenu} aria-label="Kevin — inicio">
+            <BrandMark />
+            <span className="brand-name">Kevin</span>
           </a>
 
           <nav className="desktop-nav" aria-label="Navegación principal">
@@ -377,15 +387,8 @@ export default function App() {
           <div className="footer-brand">
             <div className="footer-top">
               <a className="brand" href="#inicio">
-                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M9 6 4 12l5 6M15 6l5 6-5 6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  />
-                </svg>
-                <span>Kevin</span>
+                <BrandMark />
+                <span className="brand-name">Kevin</span>
               </a>
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
             </div>
