@@ -185,9 +185,9 @@ export default function App() {
           <Pixels className="hero-pixels-left" />
           <div className="container hero-grid">
             <div className="hero-copy" data-reveal>
-              <p className="eyebrow">// {profile.role}</p>
+              <p className="eyebrow">// {profile.tagline}</p>
               <h1>
-                Kevin desarrolla software orientado a la{' '}
+                Desarrollo de software con enfoque en{' '}
                 <span className="accent">automatización</span>
               </h1>
               <p className="lead">
