@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Kevin Escorcia',
   fullName: 'Kevin Andrés Escorcia Salgado',
-  role: 'Desarrollador Full Stack & AI Engineer',
+  role: 'Especialista en Automatización con IA',
   location: 'Colombia',
   email: 'kescorci5@gmail.com',
   github: 'https://github.com/KevinLise',
@@ -22,8 +22,8 @@ export const projects = [
     index: '01',
     title: 'Academia AI Assistant',
     description:
-      'Sistema de atención al cliente con IA: recuperación de contexto (RAG), FastAPI y Gemini.',
-    tags: ['Python', 'FastAPI', 'Qdrant', 'Gemini', 'RAG'],
+      'Sistema de atención al cliente con IA: recuperación de contexto (RAG) sobre documentos y respuestas asistidas.',
+    tags: ['Python', 'FastAPI', 'Qdrant', 'RAG'],
     repo: 'https://github.com/KevinLise/Version2.0',
     live: '',
     art: 'art-purple',
@@ -66,29 +66,29 @@ export const projects = [
 
 export const skillGroups = [
   {
-    title: 'Lenguajes',
-    items: ['Python', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+    title: 'Automatización',
+    items: ['Agentes IA', 'RAG', 'Prompt engineering', 'Flujos automatizados'],
   },
   {
-    title: 'Frontend',
-    items: ['React', 'Vue', 'Tailwind CSS', 'Vite', 'Chart.js'],
+    title: 'Modelos & datos',
+    items: ['Ollama', 'LLMs locales', 'Embeddings', 'Qdrant'],
   },
   {
-    title: 'Backend & datos',
-    items: ['FastAPI', 'PostgreSQL', 'SQLite', 'Qdrant', 'Spark', 'Kafka'],
+    title: 'Documentos',
+    items: ['OCR', 'Extracción de datos', 'Clasificación'],
   },
   {
-    title: 'IA & automatización',
-    items: ['RAG', 'Agentes IA', 'Gemini', 'Ollama', 'OCR'],
+    title: 'Diseño',
+    items: ['Figma', 'UI/UX', 'Prototipado'],
   },
   {
     title: 'Herramientas',
-    items: ['Git', 'GitHub', 'Docker', 'Docker Compose', 'Linux', 'Figma'],
+    items: ['Git', 'GitHub', 'Linux'],
   },
 ]
 
 export const about = [
-  'Soy estudiante de desarrollo de software, especializado en automatización con IA y desarrollo frontend. Mi stack principal incluye Python, JavaScript, HTML, CSS, Git/GitHub y SQL, con experiencia construyendo agentes de IA.',
-  'Disfruto construir herramientas y aplicaciones prácticas: desde asistentes con RAG hasta dashboards de gastos. Me apasiona el aprendizaje basado en proyectos y trabajo bien en equipo.',
-  'Estoy abierto a prácticas, proyectos freelance y oportunidades donde pueda aportar en frontend, datos o automatización con IA.',
+  'Soy especialista en automatización con IA. Diseño agentes que trabajan sobre RAG: conecto modelos, documentos y flujos para que las tareas repetitivas se resuelvan solas.',
+  'Mi enfoque es entender el proceso, diseñar la solución y orquestar las herramientas de IA. Uso la IA como mi principal herramienta de trabajo y cuido cada detalle de lo que entrego.',
+  'También diseño: me importa cómo se ve y cómo se siente el producto, desde la interfaz hasta la documentación. Estoy abierto a proyectos de automatización, agentes y diseño.',
 ]

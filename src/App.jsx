@@ -164,12 +164,11 @@ export default function App() {
             <div className="hero-copy" data-reveal>
               <p className="eyebrow">// {profile.role}</p>
               <h1>
-                Kevin es un <span className="accent">desarrollador Full Stack</span> e&nbsp;ingeniero
-                de IA
+                Kevin diseña <span className="accent">agentes de IA</span> sobre RAG
               </h1>
               <p className="lead">
-                Construyo aplicaciones web donde la automatización, los datos y el diseño se
-                encuentran.
+                Automatizo procesos con agentes que trabajan sobre tus documentos: RAG, modelos
+                locales y flujos que resuelven tareas repetitivas.
               </p>
               <div className="hero-actions">
                 <a className="btn primary" href="#contacto">
@@ -200,14 +199,15 @@ export default function App() {
                     {'{'}
                   </span>
                   <span className="line">
-                    {'  '}rol: <span className="tok-str">'Full Stack'</span>,
+                    {'  '}rol: <span className="tok-str">'Automatización con IA'</span>,
                   </span>
                   <span className="line">
-                    {'  '}foco: <span className="tok-str">'IA &amp; datos'</span>,
+                    {'  '}foco: <span className="tok-str">'Agentes &amp; RAG'</span>,
                   </span>
                   <span className="line">
-                    {'  '}stack: [<span className="tok-str">'React'</span>,{' '}
-                    <span className="tok-str">'Python'</span>],
+                    {'  '}stack: [<span className="tok-str">'RAG'</span>,{' '}
+                    <span className="tok-str">'Ollama'</span>,{' '}
+                    <span className="tok-str">'Qdrant'</span>],
                   </span>
                   <span className="line">
                     {'  '}disponible: <span className="tok-bool">true</span>
@@ -215,10 +215,10 @@ export default function App() {
                   <span className="line">{'}'}</span>
                 </div>
               </div>
-              <span className="chip chip-a">React</span>
-              <span className="chip chip-b">Python</span>
+              <span className="chip chip-a">RAG</span>
+              <span className="chip chip-b">Ollama</span>
               <span className="chip chip-c">IA</span>
-              <span className="chip chip-d">FastAPI</span>
+              <span className="chip chip-d">Qdrant</span>
             </div>
           </div>
         </section>
@@ -320,8 +320,9 @@ export default function App() {
             <SectionTitle title="contacto" />
             <div className="contact-grid">
               <p className="contact-copy" data-reveal>
-                Estoy abierto a prácticas, proyectos freelance y oportunidades donde pueda aportar en
-                frontend, datos o automatización con IA. Si tienes una idea o una vacante, escríbeme.
+                Estoy abierto a prácticas, proyectos freelance y oportunidades donde pueda aportar
+                en automatización, agentes de IA y diseño. Si tienes una idea o una vacante,
+                escríbeme.
               </p>
               <div className="contact-card" data-reveal>
                 <h3>Escríbeme aquí</h3>
