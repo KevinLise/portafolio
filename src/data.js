@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Kevin Escorcia',
   fullName: 'Kevin Andrés Escorcia Salgado',
-  role: 'Especialista en Automatización con IA',
+  role: 'Desarrollo de software · Automatización con IA',
   location: 'Colombia',
   email: 'kescorci5@gmail.com',
   github: 'https://github.com/KevinLise',
@@ -102,7 +102,7 @@ export const tools = [
 ]
 
 export const about = [
-  'Soy especialista en automatización con IA. Diseño agentes que trabajan sobre RAG: conecto modelos, documentos y flujos para que las tareas repetitivas se resuelvan solas.',
+  'Soy desarrollador de software orientado a la automatización. Diseño agentes que trabajan sobre RAG: conecto modelos, documentos y flujos para que las tareas repetitivas se resuelvan solas.',
   'Mi enfoque es entender el proceso, diseñar la solución y orquestar las herramientas de IA. Uso la IA como mi principal herramienta de trabajo y cuido cada detalle de lo que entrego.',
   'También diseño: me importa cómo se ve y cómo se siente el producto, desde la interfaz hasta la documentación. Estoy abierto a proyectos de automatización, agentes y diseño.',
 ]

@@ -187,7 +187,8 @@ export default function App() {
             <div className="hero-copy" data-reveal>
               <p className="eyebrow">// {profile.role}</p>
               <h1>
-                Kevin diseña <span className="accent">agentes de IA</span> sobre RAG
+                Kevin desarrolla software orientado a la{' '}
+                <span className="accent">automatización</span>
               </h1>
               <p className="lead">
                 Automatizo procesos con agentes que trabajan sobre tus documentos: RAG, modelos
