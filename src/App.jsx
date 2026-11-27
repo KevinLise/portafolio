@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { about, navLinks, profile, projects, skillGroups } from './data'
+import { about, navLinks, profile, projects, skillGroups, tools } from './data'
 
 function Icon({ name, size = 18 }) {
   const common = {
@@ -59,6 +59,29 @@ function SectionTitle({ title, action }) {
       </h2>
       <span className="line" />
       {action}
+    </div>
+  )
+}
+
+function ToolMarquee({ items }) {
+  return (
+    <div className="tools-marquee" aria-label="Herramientas principales">
+      <div className="marquee-track">
+        <ul className="marquee-group">
+          {items.map((item) => (
+            <li className="marquee-item" key={item}>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <ul className="marquee-group" aria-hidden="true">
+          {items.map((item) => (
+            <li className="marquee-item" key={`dup-${item}`}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
@@ -222,6 +245,8 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        <ToolMarquee items={tools} />
 
         <section className="quote-section">
           <div className="container quote-inner" data-reveal>

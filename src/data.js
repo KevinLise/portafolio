@@ -79,12 +79,26 @@ export const skillGroups = [
   },
   {
     title: 'Diseño',
-    items: ['Figma', 'UI/UX', 'Prototipado'],
+    items: ['UI/UX', 'Prototipado'],
   },
   {
     title: 'Herramientas',
-    items: ['Git', 'GitHub', 'Linux'],
+    items: ['Git', 'GitHub'],
   },
+]
+
+// Herramientas que se muestran en el carrusel del hero
+export const tools = [
+  'Agentes IA',
+  'RAG',
+  'Ollama',
+  'Qdrant',
+  'OCR',
+  'Prompt engineering',
+  'LLMs locales',
+  'Embeddings',
+  'Automatización',
+  'Extracción de datos',
 ]
 
 export const about = [
